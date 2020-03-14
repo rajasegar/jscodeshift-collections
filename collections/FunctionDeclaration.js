@@ -2,6 +2,7 @@ const Collection = require('jscodeshift/src/Collection');
 const NodeCollection = require('jscodeshift/src/collections/Node');
 const once = require('jscodeshift/src/utils/once');
 const recast = require('recast');
+const j = require('jscodeshift');
 
 const types = recast.types.namedTypes;
 
@@ -37,6 +38,19 @@ const transformMethods = {
     return this.forEach((path) => {
       const node = path.value;
       node.id.name = newName;
+    });
+  },
+
+  addParam(param) {
+    return this.forEach((path) => {
+      path.value.params.push(j.identifier(param));
+    });
+  },
+
+  removeParam(param) {
+    return this.forEach((path) => {
+      const newParams = path.value.params.filter((p) => p.name !== param);
+      path.value.params = newParams;
     });
   },
 };
