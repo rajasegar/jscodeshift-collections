@@ -4,6 +4,8 @@ Some more Collections for jscodeshift for easy and accessible api for writing Co
 
 ## FunctionDeclaration
 
+Say for example, if you want to rename a function declaration `foo` to `bar` 
+
 ### Before
 
 ```js

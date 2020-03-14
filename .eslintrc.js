@@ -9,6 +9,7 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    jest: 'true',
   },
   parserOptions: {
     ecmaVersion: 2018,
