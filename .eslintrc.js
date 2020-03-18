@@ -1,6 +1,8 @@
 module.exports = {
   env: {
     commonjs: true,
+    jest: true,
+    node: true,
     es6: true,
   },
   extends: [
