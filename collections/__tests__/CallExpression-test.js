@@ -3,22 +3,27 @@ const recast = require('recast');
 
 const types = recast.types.namedTypes;
 
-const nodes = [recast.parse(
-  'foo()',
-  'bar(a,b,c)',
-)];
-
 const CallExpressionCollection = require('../CallExpression');
 
 CallExpressionCollection.register();
 
 test('find all call expressions', () => {
+  const nodes = [recast.parse(
+    'foo()',
+    'bar(a,b,c)',
+  )];
+
   const declarators = Collection.fromNodes(nodes).findCallExpressions();
   expect(declarators.getTypes()).toContain('CallExpression');
 });
 
 
 test('rename call expressions', () => {
+  const nodes = [recast.parse(
+    'foo()',
+    'bar(a,b,c)',
+  )];
+
   Collection.fromNodes(nodes)
     .findCallExpressions('foo')
     .renameTo('xyz');
@@ -28,6 +33,11 @@ test('rename call expressions', () => {
 });
 
 test('remove params', () => {
+  const nodes = [recast.parse(
+    'foo()',
+    'bar(a,b,c)',
+  )];
+
   Collection.fromNodes(nodes)
     .findCallExpressions('bar')
     .removeParam('a');
@@ -37,10 +47,14 @@ test('remove params', () => {
 });
 
 test('add params', () => {
+  const nodes = [recast.parse(
+    'bar(a,b,c)',
+  )];
+
   Collection.fromNodes(nodes)
     .findCallExpressions('bar')
     .addParam('d');
 
-  const declarators = Collection.fromNodes(nodes).find(types.Identifier, { name: 'd' });
-  expect(declarators.length).toBe(1);
+  const callExpressionNode = nodes[0].program.body[0];
+  expect(callExpressionNode.expression.arguments.length).toBe(4);
 });

@@ -41,7 +41,7 @@ const transformMethods = {
 
   addParam(param) {
     return this.forEach((path) => {
-      path.value.params.push(j.identifier(param));
+      path.value.arguments.push(j.identifier(param));
     });
   },
 
