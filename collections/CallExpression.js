@@ -6,6 +6,21 @@ const j = require('jscodeshift');
 
 const { CallExpression } = recast.types.namedTypes;
 
+function memberExpressionFilter(name) {
+  const parts = name.split('.');
+  if (parts.length === 2) {
+    return {
+      object: { name: parts[0] },
+      property: { name: parts[1] },
+    };
+  }
+  const exceptLast = parts.slice(0, parts.length - 1);
+  return {
+    object: memberExpressionFilter(exceptLast.join('.')),
+    property: { name: parts[parts.length - 1] },
+  };
+}
+
 /**
 * @mixin
 */
@@ -17,7 +32,15 @@ const globalMethods = {
    * @return {Collection}
    */
   findCallExpressions(name) {
-    const filter = name ? { callee: { name } } : null;
+    const callees = name ? name.split('.') : [];
+    let filter;
+    if (callees.length === 1) {
+      filter = { callee: { name } };
+    } else if (callees.length > 1) {
+      filter = { callee: memberExpressionFilter(name) };
+    } else {
+      filter = null;
+    }
     return this.find(CallExpression, filter);
   },
 };
@@ -47,8 +70,8 @@ const transformMethods = {
 
   removeParam(param) {
     return this.forEach((path) => {
-      const newParams = path.value.params.filter((p) => p.name !== param);
-      path.value.params = newParams;
+      const newParams = path.value.arguments.filter((p) => p.name !== param);
+      path.value.arguments = newParams;
     });
   },
 };

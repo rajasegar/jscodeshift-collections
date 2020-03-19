@@ -1,6 +1,6 @@
 # jscodeshift-collections
 
-Some more Collections for jscodeshift for easy and accessible api for writing Codemods
+Some more Collections for jscodeshift for easy and terse api for writing Codemods
 
 ## FunctionDeclaration
 
@@ -25,3 +25,7 @@ j.findFunctionDeclarations('foo')
 function bar() {
 }
 ```
+
+## List of Collection:
+- FunctionDeclaration
+- CallExpression

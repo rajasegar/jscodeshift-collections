@@ -18,6 +18,23 @@ test('find all call expressions', () => {
 });
 
 
+test('find all member expressions', () => {
+  const nodes = [recast.parse(
+    'foo.bar()',
+  )];
+
+  const declarators = Collection.fromNodes(nodes).findCallExpressions('foo.bar');
+  expect(declarators.getTypes()).toContain('CallExpression');
+});
+
+test('find all nested member expressions', () => {
+  const nodes = [recast.parse(
+    'foo.bar.baz()',
+  )];
+
+  const declarators = Collection.fromNodes(nodes).findCallExpressions('foo.bar.baz');
+  expect(declarators.getTypes()).toContain('CallExpression');
+});
 test('rename call expressions', () => {
   const nodes = [recast.parse(
     'foo()',
@@ -32,9 +49,23 @@ test('rename call expressions', () => {
   expect(declarators.length).toBe(1);
 });
 
-test('remove params', () => {
+test('rename member expressions', () => {
   const nodes = [recast.parse(
     'foo()',
+  )];
+
+  Collection.fromNodes(nodes)
+    .findCallExpressions('foo')
+    .renameTo('foo.bar');
+
+  const callExpressionNode = nodes[0].program.body[0];
+  console.log(callExpressionNode);
+  expect(callExpressionNode.expression.callee.object.name).toBe('foo');
+  expect(callExpressionNode.expression.callee.property.name).toBe('bar');
+});
+
+test('remove params', () => {
+  const nodes = [recast.parse(
     'bar(a,b,c)',
   )];
 
@@ -42,8 +73,8 @@ test('remove params', () => {
     .findCallExpressions('bar')
     .removeParam('a');
 
-  const identifiers = Collection.fromNodes(nodes).find(types.Identifier, { name: 'a' });
-  expect(identifiers.length).toBe(0);
+  const callExpressionNode = nodes[0].program.body[0];
+  expect(callExpressionNode.expression.arguments.length).toBe(2);
 });
 
 test('add params', () => {
