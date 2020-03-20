@@ -7,6 +7,12 @@ Some more Collections for jscodeshift for easy and terse api for writing Codemod
 npm install jscodeshift-collections
 ```
 
+## Usage
+```
+const jscsCollections = require('jscodeshift-collections');
+jscsCollections.registerCollections();
+```
+
 ## FunctionDeclaration
 
 Say for example, if you want to rename a function declaration `foo` to `bar` 
