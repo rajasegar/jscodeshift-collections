@@ -4,8 +4,6 @@ const once = require('jscodeshift/src/utils/once');
 const recast = require('recast');
 const j = require('jscodeshift');
 
-const types = recast.types.namedTypes;
-
 const { FunctionDeclaration } = recast.types.namedTypes;
 
 /**
