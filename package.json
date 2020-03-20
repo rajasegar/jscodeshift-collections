@@ -20,17 +20,23 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
     "jest": "^25.1.0",
-    "release-it": "^13.1.1"
+    "release-it": "^13.1.1",
+    "release-it-lerna-changelog": "^2.1.0"
   },
   "release-it": {
     "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular",
+      "release-it-lerna-changelog": {
         "infile": "CHANGELOG.md"
       }
     },
     "npm": {
       "publish": true
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
     }
   }
 }
