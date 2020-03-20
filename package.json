@@ -1,6 +1,6 @@
 {
   "name": "jscodeshift-collections",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,11 @@
     "release-it": "^13.1.1"
   },
   "release-it": {
-     "plugins": {
-    "@release-it/conventional-changelog": {
-      "preset": "angular",
-      "infile": "CHANGELOG.md"
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
     }
-  }
   }
 }
