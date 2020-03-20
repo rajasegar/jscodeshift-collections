@@ -29,7 +29,7 @@
   },
   "release-it": {
     "plugins": {
-      "release-it-lerna-changelog": {
+      "@release-it/conventional-changelog": {
         "infile": "CHANGELOG.md"
       }
     },
