@@ -1,3 +1,12 @@
+## [1.0.6](https://github.com/rajasegar/jscodeshift-collections/compare/v1.0.5...v1.0.6) (2020-03-20)
+
+
+### Bug Fixes
+
+* add preset for changelog ([ad255e8](https://github.com/rajasegar/jscodeshift-collections/commit/ad255e88de618c0aab58d75258528c3a577880b2))
+* lint errors ([2ba73b7](https://github.com/rajasegar/jscodeshift-collections/commit/2ba73b798c1b913c04ad5b5af9c25ce6895a5cfa))
+* moving to conventional changelog ([4cd3dbc](https://github.com/rajasegar/jscodeshift-collections/commit/4cd3dbc75c13834af93681cadfd904bd36f744c7))
+
 
 
 
