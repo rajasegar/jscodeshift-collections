@@ -2,6 +2,11 @@
 
 Some more Collections for jscodeshift for easy and terse api for writing Codemods
 
+## Install
+```
+npm install jscodeshift-collections
+```
+
 ## FunctionDeclaration
 
 Say for example, if you want to rename a function declaration `foo` to `bar` 
