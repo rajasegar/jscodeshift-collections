@@ -22,7 +22,7 @@
     "jest": "^25.1.0",
     "release-it": "^13.1.1"
   },
-  'release-it': {
+  "release-it": {
      "plugins": {
     "@release-it/conventional-changelog": {
       "preset": "angular",
