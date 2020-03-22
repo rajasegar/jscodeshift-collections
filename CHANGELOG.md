@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rajasegar/jscodeshift-collections/compare/v1.0.7...v1.1.0) (2020-03-22)
+
+
+### Features
+
+* add import declaration collections ([5c92452](https://github.com/rajasegar/jscodeshift-collections/commit/5c924528dbebe251f3f5f05d507c12490b28d0b2))
+
 ## [1.0.7](https://github.com/rajasegar/jscodeshift-collections/compare/v1.0.5...v1.0.7) (2020-03-20)
 
 
