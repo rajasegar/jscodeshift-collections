@@ -59,7 +59,7 @@ test('rename member expressions', () => {
     .renameTo('foo.bar');
 
   const callExpressionNode = nodes[0].program.body[0];
-  console.log(callExpressionNode);
+  // console.log(callExpressionNode);
   expect(callExpressionNode.expression.callee.object.name).toBe('foo');
   expect(callExpressionNode.expression.callee.property.name).toBe('bar');
 });

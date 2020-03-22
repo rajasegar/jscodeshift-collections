@@ -56,9 +56,15 @@ const transformMethods = {
    * @return {Collection}
    */
   renameTo(newName) {
+    const isMemberExpression = newName.includes('.');
     return this.forEach((path) => {
       const node = path.value;
-      node.callee.name = newName;
+      if (isMemberExpression) {
+        const [object, property] = newName.split('.');
+        node.callee = j.memberExpression(j.identifier(object), j.identifier(property));
+      } else {
+        node.callee.name = newName;
+      }
     });
   },
 
