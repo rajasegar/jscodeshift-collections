@@ -21,8 +21,8 @@ function memberExpressionFilter(name) {
 }
 
 /**
-* @mixin
-*/
+ * @mixin
+ */
 const globalMethods = {
   /**
    * Finds all call expressions optionally filtered by name.
@@ -45,8 +45,8 @@ const globalMethods = {
 };
 
 /**
-* @mixin
-*/
+ * @mixin
+ */
 const transformMethods = {
   /**
    * Renames a call expression
@@ -60,7 +60,10 @@ const transformMethods = {
       const node = path.value;
       if (isMemberExpression) {
         const [object, property] = newName.split('.');
-        node.callee = j.memberExpression(j.identifier(object), j.identifier(property));
+        node.callee = j.memberExpression(
+          j.identifier(object),
+          j.identifier(property)
+        );
       } else {
         node.callee.name = newName;
       }

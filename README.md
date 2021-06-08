@@ -16,11 +16,11 @@ npm install jscodeshift-collections
 const jscsCollections = require('jscodeshift-collections');
 
 module.exports = function(fileInfo, api) {
-  const { jscodeshift } = api;
+  const j =  api.jscodeshift;
 
-  jscsCollections.registerCollections(jscodeshift);
+  jscsCollections.registerCollections(j);
 
-  return jscodeshift(fileInfo.source)
+  return j(fileInfo.source)
     .findFunctionDeclarations('foo')
     .renameTo('bar')
     .toSource();

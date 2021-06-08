@@ -6,8 +6,8 @@ const j = require('jscodeshift');
 const { ImportDeclaration } = recast.types.namedTypes;
 
 /**
-* @mixin
-*/
+ * @mixin
+ */
 const globalMethods = {
   /**
    * Finds all import declarations, optionally filtered by source.
@@ -22,8 +22,8 @@ const globalMethods = {
 };
 
 /**
-* @mixin
-*/
+ * @mixin
+ */
 const transformMethods = {
   /**
    * Renames a source of import declaration
@@ -40,7 +40,10 @@ const transformMethods = {
 
   addSpecifier(imported, local = undefined) {
     const newLocal = local || imported;
-    const newSpecifier = j.importSpecifier(j.identifier(imported), j.identifier(newLocal));
+    const newSpecifier = j.importSpecifier(
+      j.identifier(imported),
+      j.identifier(newLocal)
+    );
     return this.forEach((path) => {
       path.value.specifiers.push(newSpecifier);
     });
@@ -48,7 +51,9 @@ const transformMethods = {
 
   removeSpecifier(param) {
     return this.forEach((path) => {
-      const newSpecifiers = path.value.specifiers.filter((p) => p.imported.name !== param);
+      const newSpecifiers = path.value.specifiers.filter(
+        (p) => p.imported.name !== param
+      );
       path.value.specifiers = newSpecifiers; // eslint-disable-line
     });
   },

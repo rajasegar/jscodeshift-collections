@@ -6,8 +6,8 @@ const j = require('jscodeshift');
 const { FunctionDeclaration } = recast.types.namedTypes;
 
 /**
-* @mixin
-*/
+ * @mixin
+ */
 const globalMethods = {
   /**
    * Finds all function declarations, optionally filtered by name.
@@ -22,8 +22,8 @@ const globalMethods = {
 };
 
 /**
-* @mixin
-*/
+ * @mixin
+ */
 const transformMethods = {
   /**
    * Renames a function declaration

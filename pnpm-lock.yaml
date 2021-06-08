@@ -3,10 +3,12 @@ lockfileVersion: 5.3
 specifiers:
   '@release-it/conventional-changelog': ^1.1.0
   eslint: ^6.8.0
-  eslint-config-airbnb-base: ^14.1.0
-  eslint-plugin-import: ^2.20.1
+  eslint-config-prettier: ^8.3.0
+  eslint-plugin-node: ^11.1.0
+  eslint-plugin-prettier: ^3.4.0
   jest: ^25.1.0
   jscodeshift: ^0.7.0
+  prettier: ^2.3.1
   recast: ^0.18.7
   release-it: ^13.1.1
 
@@ -17,9 +19,11 @@ dependencies:
 devDependencies:
   '@release-it/conventional-changelog': 1.1.0
   eslint: 6.8.0
-  eslint-config-airbnb-base: 14.1.0_70f7a64bd774aaf00fe73c7ab169c95d
-  eslint-plugin-import: 2.20.1_eslint@6.8.0
+  eslint-config-prettier: 8.3.0_eslint@6.8.0
+  eslint-plugin-node: 11.1.0_eslint@6.8.0
+  eslint-plugin-prettier: 3.4.0_ec036aaed24f92fbf37c16cad12dd859
   jest: 25.1.0
+  prettier: 2.3.1
   release-it: 13.1.1
 
 packages:
@@ -1545,15 +1549,6 @@ packages:
     resolution: {integrity: sha1-nlKHYrSpBmrRY6aWKjZEGOlibs4=}
     dev: true
 
-  /array-includes/3.1.1:
-    resolution: {integrity: sha512-c2VXaCHl7zPsvpkFsw4nxvFie4fh1ur9bpcgsVkIjqn0H/Xwdg+7fv3n2r/isyS8EBj5b06M9kHyZuIr4El6WQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      define-properties: 1.1.3
-      es-abstract: 1.17.4
-      is-string: 1.0.5
-    dev: true
-
   /array-union/2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
@@ -1562,14 +1557,6 @@ packages:
   /array-unique/0.3.2:
     resolution: {integrity: sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=}
     engines: {node: '>=0.10.0'}
-
-  /array.prototype.flat/1.2.3:
-    resolution: {integrity: sha512-gBlRZV0VSmfPIeWfuuy56XZMvbVfbEUnOXUvt3F/eUUUSyzlgLxhEX4YAEpxNAogRGehPSnfXyPtYyKAhkzQhQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      define-properties: 1.1.3
-      es-abstract: 1.17.4
-    dev: true
 
   /arrify/1.0.1:
     resolution: {integrity: sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=}
@@ -1688,8 +1675,8 @@ packages:
       babel-plugin-jest-hoist: 25.1.0
     dev: true
 
-  /balanced-match/1.0.0:
-    resolution: {integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=}
+  /balanced-match/1.0.2:
+    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
   /base/0.11.2:
     resolution: {integrity: sha512-5T6P4xPgpp0YDFvSWwEZ4NoE3aM4QBQXDzmVbraCkFj8zHM+mba8SyqB5DbZWyR7mYHo6Y7BdQo3MoA4m0TeQg==}
@@ -1730,7 +1717,7 @@ packages:
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
-      balanced-match: 1.0.0
+      balanced-match: 1.0.2
       concat-map: 0.0.1
 
   /braces/2.3.2:
@@ -2072,15 +2059,6 @@ packages:
       unique-string: 2.0.0
       write-file-atomic: 3.0.3
       xdg-basedir: 4.0.0
-    dev: true
-
-  /confusing-browser-globals/1.0.9:
-    resolution: {integrity: sha512-KbS1Y0jMtyPgIxjO7ZzMAuUpAKMt1SzCL9fsrKsX6b0zJPTaT0SiSPmewwVZg9UAO83HVIlEhZF84LIjZ0lmAw==}
-    dev: true
-
-  /contains-path/0.1.0:
-    resolution: {integrity: sha1-/ozxhP9mcLa67wGp1IYaXL7EEgo=}
-    engines: {node: '>=0.10.0'}
     dev: true
 
   /conventional-changelog-angular/5.0.6:
@@ -2493,14 +2471,6 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /doctrine/1.5.0:
-    resolution: {integrity: sha1-N53Ocw9hZvds76TmcHoVmwLFpvo=}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      esutils: 2.0.3
-      isarray: 1.0.0
-    dev: true
-
   /doctrine/3.0.0:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
@@ -2611,54 +2581,56 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-airbnb-base/14.1.0_70f7a64bd774aaf00fe73c7ab169c95d:
-    resolution: {integrity: sha512-+XCcfGyCnbzOnktDVhwsCAx+9DmrzEmuwxyHUJpw+kqBVT744OUBrB09khgFKlK1lshVww6qXGsYPZpavoNjJw==}
-    engines: {node: '>= 6'}
+  /eslint-config-prettier/8.3.0_eslint@6.8.0:
+    resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
+    hasBin: true
     peerDependencies:
-      eslint: ^5.16.0 || ^6.8.0
-      eslint-plugin-import: ^2.20.1
+      eslint: '>=7.0.0'
     dependencies:
-      confusing-browser-globals: 1.0.9
       eslint: 6.8.0
-      eslint-plugin-import: 2.20.1_eslint@6.8.0
-      object.assign: 4.1.0
-      object.entries: 1.1.1
     dev: true
 
-  /eslint-import-resolver-node/0.3.3:
-    resolution: {integrity: sha512-b8crLDo0M5RSe5YG8Pu2DYBj71tSB6OvXkfzwbJU2w7y8P4/yo0MyF8jU26IEuEuHF2K5/gcAJE3LhQGqBBbVg==}
-    dependencies:
-      debug: 2.6.9
-      resolve: 1.15.1
-    dev: true
-
-  /eslint-module-utils/2.5.2:
-    resolution: {integrity: sha512-LGScZ/JSlqGKiT8OC+cYRxseMjyqt6QO54nl281CK93unD89ijSeRV6An8Ci/2nvWVKe8K/Tqdm75RQoIOCr+Q==}
-    engines: {node: '>=4'}
-    dependencies:
-      debug: 2.6.9
-      pkg-dir: 2.0.0
-    dev: true
-
-  /eslint-plugin-import/2.20.1_eslint@6.8.0:
-    resolution: {integrity: sha512-qQHgFOTjguR+LnYRoToeZWT62XM55MBVXObHM6SKFd1VzDcX/vqT1kAz8ssqigh5eMj8qXcRoXXGZpPP6RfdCw==}
-    engines: {node: '>=4'}
+  /eslint-plugin-es/3.0.1_eslint@6.8.0:
+    resolution: {integrity: sha512-GUmAsJaN4Fc7Gbtl8uOBlayo2DqhwWvEzykMHSCZHU3XdJ+NSzzZcVhXh3VxX5icqQ+oQdIEawXX8xkR3mIFmQ==}
+    engines: {node: '>=8.10.0'}
     peerDependencies:
-      eslint: 2.x - 6.x
+      eslint: '>=4.19.1'
     dependencies:
-      array-includes: 3.1.1
-      array.prototype.flat: 1.2.3
-      contains-path: 0.1.0
-      debug: 2.6.9
-      doctrine: 1.5.0
       eslint: 6.8.0
-      eslint-import-resolver-node: 0.3.3
-      eslint-module-utils: 2.5.2
-      has: 1.0.3
+      eslint-utils: 2.1.0
+      regexpp: 3.1.0
+    dev: true
+
+  /eslint-plugin-node/11.1.0_eslint@6.8.0:
+    resolution: {integrity: sha512-oUwtPJ1W0SKD0Tr+wqu92c5xuCeQqB3hSCHasn/ZgjFdA9iDGNkNf2Zi9ztY7X+hNuMib23LNGRm6+uN+KLE3g==}
+    engines: {node: '>=8.10.0'}
+    peerDependencies:
+      eslint: '>=5.16.0'
+    dependencies:
+      eslint: 6.8.0
+      eslint-plugin-es: 3.0.1_eslint@6.8.0
+      eslint-utils: 2.1.0
+      ignore: 5.1.8
       minimatch: 3.0.4
-      object.values: 1.1.1
-      read-pkg-up: 2.0.0
-      resolve: 1.15.1
+      resolve: 1.20.0
+      semver: 6.3.0
+    dev: true
+
+  /eslint-plugin-prettier/3.4.0_ec036aaed24f92fbf37c16cad12dd859:
+    resolution: {integrity: sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      eslint: '>=5.0.0'
+      eslint-config-prettier: '*'
+      prettier: '>=1.13.0'
+    peerDependenciesMeta:
+      eslint-config-prettier:
+        optional: true
+    dependencies:
+      eslint: 6.8.0
+      eslint-config-prettier: 8.3.0_eslint@6.8.0
+      prettier: 2.3.1
+      prettier-linter-helpers: 1.0.0
     dev: true
 
   /eslint-scope/5.0.0:
@@ -2676,8 +2648,20 @@ packages:
       eslint-visitor-keys: 1.1.0
     dev: true
 
+  /eslint-utils/2.1.0:
+    resolution: {integrity: sha512-w94dQYoauyvlDc43XnGB8lU3Zt713vNChgt4EWwhXAP2XkBvndfxF0AgIqKOOasjPIPzj9JqgwkwbCYD0/V3Zg==}
+    engines: {node: '>=6'}
+    dependencies:
+      eslint-visitor-keys: 1.3.0
+    dev: true
+
   /eslint-visitor-keys/1.1.0:
     resolution: {integrity: sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==}
+    engines: {node: '>=4'}
+    dev: true
+
+  /eslint-visitor-keys/1.3.0:
+    resolution: {integrity: sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ==}
     engines: {node: '>=4'}
     dev: true
 
@@ -2885,6 +2869,10 @@ packages:
 
   /fast-deep-equal/3.1.1:
     resolution: {integrity: sha512-8UEa58QDLauDNfpbrX55Q9jrGHThw2ZMdOky5Gl1CDtVeJDPVrG4Jxx1N8jw2gkWaff5UUuX1KJd+9zGe2B+ZA==}
+    dev: true
+
+  /fast-diff/1.2.0:
+    resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
     dev: true
 
   /fast-glob/3.2.2:
@@ -3401,6 +3389,11 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /ignore/5.1.8:
+    resolution: {integrity: sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==}
+    engines: {node: '>= 4'}
+    dev: true
+
   /import-cwd/3.0.0:
     resolution: {integrity: sha512-4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==}
     engines: {node: '>=8'}
@@ -3562,6 +3555,12 @@ packages:
     hasBin: true
     dependencies:
       ci-info: 2.0.0
+    dev: true
+
+  /is-core-module/2.4.0:
+    resolution: {integrity: sha512-6A2fkfq1rfeQZjxrZJGerpLCTHRNEBiSgnu0+obeJpEPZRUooHgsizvzv0ZjJwOz3iWIHdJtVWJ/tmPr3D21/A==}
+    dependencies:
+      has: 1.0.3
     dev: true
 
   /is-data-descriptor/0.1.4:
@@ -3735,11 +3734,6 @@ packages:
   /is-stream/2.0.0:
     resolution: {integrity: sha512-XCoy+WlUr7d1+Z8GgSuXmpuUFC9fOhRXglJMx+dwLKTkL44Cjd4W1Z5P+BQZpr+cR93aGP4S/s7Ftw6Nd/kiEw==}
     engines: {node: '>=8'}
-    dev: true
-
-  /is-string/1.0.5:
-    resolution: {integrity: sha512-buY6VNRjhQMiF1qWDouloZlQbRhDPCebwxSjxMjxgemYT46YMd2NR0/H+fBhEfWX4A/w9TBJ+ol+okqJKFE6vQ==}
-    engines: {node: '>= 0.4'}
     dev: true
 
   /is-symbol/1.0.3:
@@ -4447,16 +4441,6 @@ packages:
       strip-bom: 2.0.0
     dev: true
 
-  /load-json-file/2.0.0:
-    resolution: {integrity: sha1-eUfkIUmvgNaWy/eXvKq8/h/inKg=}
-    engines: {node: '>=4'}
-    dependencies:
-      graceful-fs: 4.2.3
-      parse-json: 2.2.0
-      pify: 2.3.0
-      strip-bom: 3.0.0
-    dev: true
-
   /load-json-file/4.0.0:
     resolution: {integrity: sha1-L19Fq5HjMhYjT9U62rZo607AmTs=}
     engines: {node: '>=4'}
@@ -4934,16 +4918,6 @@ packages:
       has-symbols: 1.0.1
       object-keys: 1.1.1
 
-  /object.entries/1.1.1:
-    resolution: {integrity: sha512-ilqR7BgdyZetJutmDPfXCDffGa0/Yzl2ivVNpbx/g4UeWrCdRnFDUBrKJGLhGieRHDATnyZXWBeCb29k9CJysQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      define-properties: 1.1.3
-      es-abstract: 1.17.4
-      function-bind: 1.1.1
-      has: 1.0.3
-    dev: true
-
   /object.getownpropertydescriptors/2.1.0:
     resolution: {integrity: sha512-Z53Oah9A3TdLoblT7VKJaTDdXdT+lQO+cNpKVnya5JDe9uLvzu1YyY1yFDFrcxrlRgWrEFH0jJtD/IbuwjcEVg==}
     engines: {node: '>= 0.8'}
@@ -4957,16 +4931,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       isobject: 3.0.1
-
-  /object.values/1.1.1:
-    resolution: {integrity: sha512-WTa54g2K8iu0kmS/us18jEmdv1a4Wi//BZ/DTVYEcH0XhLM5NYdpDHja3gt57VrZLcNAO2WGA+KpWsDBaHt6eA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      define-properties: 1.1.3
-      es-abstract: 1.17.4
-      function-bind: 1.1.1
-      has: 1.0.3
-    dev: true
 
   /octokit-pagination-methods/1.1.0:
     resolution: {integrity: sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==}
@@ -5215,6 +5179,10 @@ packages:
   /path-parse/1.0.6:
     resolution: {integrity: sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==}
 
+  /path-parse/1.0.7:
+    resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
+    dev: true
+
   /path-type/1.1.0:
     resolution: {integrity: sha1-WcRPfuSR2nBNpBXaWkBwuk+P5EE=}
     engines: {node: '>=0.10.0'}
@@ -5222,13 +5190,6 @@ packages:
       graceful-fs: 4.2.3
       pify: 2.3.0
       pinkie-promise: 2.0.1
-    dev: true
-
-  /path-type/2.0.0:
-    resolution: {integrity: sha1-8BLMuEFbcJb8LaoQVMPXI4lZTHM=}
-    engines: {node: '>=4'}
-    dependencies:
-      pify: 2.3.0
     dev: true
 
   /path-type/3.0.0:
@@ -5285,13 +5246,6 @@ packages:
     dependencies:
       node-modules-regexp: 1.0.0
 
-  /pkg-dir/2.0.0:
-    resolution: {integrity: sha1-9tXREJ4Z1j7fQo4L1X4Sd3YVM0s=}
-    engines: {node: '>=4'}
-    dependencies:
-      find-up: 2.1.0
-    dev: true
-
   /pkg-dir/3.0.0:
     resolution: {integrity: sha512-/E57AYkoeQ25qkxMj5PBOVgF8Kiu/h7cYS30Z5+R7WaiCCBfLq58ZI/dSeaEKb9WVJV5n/03QwrN3IeWIFllvw==}
     engines: {node: '>=6'}
@@ -5336,6 +5290,19 @@ packages:
   /prepend-http/2.0.0:
     resolution: {integrity: sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=}
     engines: {node: '>=4'}
+    dev: true
+
+  /prettier-linter-helpers/1.0.0:
+    resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      fast-diff: 1.2.0
+    dev: true
+
+  /prettier/2.3.1:
+    resolution: {integrity: sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-format/25.1.0:
@@ -5434,14 +5401,6 @@ packages:
       read-pkg: 1.1.0
     dev: true
 
-  /read-pkg-up/2.0.0:
-    resolution: {integrity: sha1-a3KoBImE4MQeeVEP1en6mbO1Sb4=}
-    engines: {node: '>=4'}
-    dependencies:
-      find-up: 2.1.0
-      read-pkg: 2.0.0
-    dev: true
-
   /read-pkg-up/3.0.0:
     resolution: {integrity: sha1-PtSWaF26D4/hGNBpHcUfSh/5bwc=}
     engines: {node: '>=4'}
@@ -5457,15 +5416,6 @@ packages:
       load-json-file: 1.1.0
       normalize-package-data: 2.5.0
       path-type: 1.1.0
-    dev: true
-
-  /read-pkg/2.0.0:
-    resolution: {integrity: sha1-jvHAYjxqbbDcZxPEv6xGMysjaPg=}
-    engines: {node: '>=4'}
-    dependencies:
-      load-json-file: 2.0.0
-      normalize-package-data: 2.5.0
-      path-type: 2.0.0
     dev: true
 
   /read-pkg/3.0.0:
@@ -5569,6 +5519,11 @@ packages:
   /regexpp/2.0.1:
     resolution: {integrity: sha512-lv0M6+TkDVniA3aD1Eg0DVpfU/booSu7Eev3TDO/mZKHBfVjgCGTV4t4buppESEYDtkArYFOxTJWv6S5C+iaNw==}
     engines: {node: '>=6.5.0'}
+    dev: true
+
+  /regexpp/3.1.0:
+    resolution: {integrity: sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3xdai/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q==}
+    engines: {node: '>=8'}
     dev: true
 
   /regexpu-core/4.7.0:
@@ -5792,6 +5747,13 @@ packages:
     resolution: {integrity: sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==}
     dependencies:
       path-parse: 1.0.6
+
+  /resolve/1.20.0:
+    resolution: {integrity: sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==}
+    dependencies:
+      is-core-module: 2.4.0
+      path-parse: 1.0.7
+    dev: true
 
   /responselike/1.0.2:
     resolution: {integrity: sha1-kYcg7ztjHFZCvgaPFa3lpG9Loec=}
