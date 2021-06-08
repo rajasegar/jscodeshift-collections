@@ -1,5 +1,9 @@
 # jscodeshift-collections
 
+![Build and Deploy](https://github.com/rajasegar/jscodeshift-collections/workflows/CI/badge.svg)
+[![npm version](http://img.shields.io/npm/v/jscodeshift-collections.svg?style=flat)](https://npmjs.org/package/jscodeshift-collections "View this project on npm")
+[![Coverage Status](https://coveralls.io/repos/github/rajasegar/jscodeshift-collections/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/jscodeshift-collections?branch=master)
+
 Some more Collections for jscodeshift for easy and terse api for writing Codemods
 
 ## Install
