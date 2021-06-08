@@ -10,7 +10,17 @@ npm install jscodeshift-collections
 ## Usage
 ```
 const jscsCollections = require('jscodeshift-collections');
-jscsCollections.registerCollections();
+
+module.exports = function(fileInfo, api) {
+  const { jscodeshift } = api;
+
+  jscsCollections.registerCollections(jscodeshift);
+
+  return jscodeshift(fileInfo.source)
+    .findFunctionDeclarations('foo')
+    .renameTo('bar')
+    .toSource();
+}
 ```
 
 ## FunctionDeclaration

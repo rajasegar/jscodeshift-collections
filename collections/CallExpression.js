@@ -1,4 +1,3 @@
-const Collection = require('jscodeshift/src/Collection');
 const NodeCollection = require('jscodeshift/src/collections/Node');
 const once = require('jscodeshift/src/utils/once');
 const recast = require('recast');
@@ -82,10 +81,10 @@ const transformMethods = {
   },
 };
 
-function register() {
+function register(jscodeshift) {
   NodeCollection.register();
-  Collection.registerMethods(globalMethods);
-  Collection.registerMethods(transformMethods, CallExpression);
+  jscodeshift.registerMethods(globalMethods);
+  jscodeshift.registerMethods(transformMethods, CallExpression);
 }
 
 exports.register = once(register);

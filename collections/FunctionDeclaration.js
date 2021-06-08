@@ -1,4 +1,3 @@
-// const Collection = require('jscodeshift/src/Collection');
 const NodeCollection = require('jscodeshift/src/collections/Node');
 const once = require('jscodeshift/src/utils/once');
 const recast = require('recast');
