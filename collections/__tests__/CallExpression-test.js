@@ -1,11 +1,9 @@
 const Collection = require('jscodeshift/src/Collection');
 const recast = require('recast');
 
-const types = recast.types.namedTypes;
-
 const CallExpressionCollection = require('../CallExpression');
 
-CallExpressionCollection.register();
+CallExpressionCollection.register(Collection);
 
 test('find all call expressions', () => {
   const nodes = [recast.parse(

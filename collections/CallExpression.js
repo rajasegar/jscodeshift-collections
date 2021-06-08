@@ -76,7 +76,7 @@ const transformMethods = {
   removeParam(param) {
     return this.forEach((path) => {
       const newParams = path.value.arguments.filter((p) => p.name !== param);
-      path.value.arguments = newParams;
+      path.value.arguments = newParams; // eslint-disable-line
     });
   },
 };

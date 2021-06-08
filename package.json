@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "release": "release-it"
+    "test": "jest --coverage",
+    "release": "release-it",
+    "deploy": "git push && git push --tags && npm publish",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "Rajasegar Chandran",

@@ -6,7 +6,7 @@ const types = recast.types.namedTypes;
 
 const FunctionDeclarationCollection = require('../FunctionDeclaration');
 
-FunctionDeclarationCollection.register();
+FunctionDeclarationCollection.register(Collection);
 
 test('find all function declarations', () => {
   const nodes = [recast.parse(

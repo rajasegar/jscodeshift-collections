@@ -3,9 +3,9 @@ const recast = require('recast');
 
 const ImportDeclarationCollection = require('../ImportDeclaration');
 
-ImportDeclarationCollection.register();
+ImportDeclarationCollection.register(Collection);
 
-test('find all function declarations', () => {
+test('find all import declarations', () => {
   const nodes = [recast.parse(
     'function foo() {}',
     'import a from "a"',
