@@ -3,6 +3,9 @@
 ![Build and Deploy](https://github.com/rajasegar/jscodeshift-collections/workflows/CI/badge.svg)
 [![npm version](http://img.shields.io/npm/v/jscodeshift-collections.svg?style=flat)](https://npmjs.org/package/jscodeshift-collections "View this project on npm")
 [![Coverage Status](https://coveralls.io/repos/github/rajasegar/jscodeshift-collections/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/jscodeshift-collections?branch=master)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
 
 Some more Collections for jscodeshift for easy and terse api for writing Codemods
 

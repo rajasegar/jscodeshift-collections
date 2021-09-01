@@ -4,13 +4,6 @@ on:
   push:
     branches:
       - master
-      - main
-      - 'v*' # older version branches
-    tags:
-      - '*'
-  pull_request: {}
-  schedule:
-  - cron:  '0 6 * * 0' # weekly, on sundays
 
 jobs:
   lint:
@@ -51,17 +44,20 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  floating-test:
-    name: Floating dependencies
+  release:
+    name: Release
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'skip ci')"
-
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: ${{ matrix.node }}
     - name: install dependencies
-      run: yarn install --no-lockfile
-    - name: test
-      run: yarn test
+      run: yarn install --frozen-lockfile
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npm run semantic-release
+    

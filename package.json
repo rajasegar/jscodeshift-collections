@@ -1,50 +1,53 @@
 {
   "name": "jscodeshift-collections",
   "version": "2.0.0",
-  "description": "",
+  "description": "Extra collections api for jsdcodeshift",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "release": "release-it",
-    "deploy": "git push && git push --tags && npm publish",
+    "semantic-release": "semantic-release",
     "lint": "eslint ."
   },
-  "keywords": [],
+  "keywords": ["jscodeshift", "collections", "ast", "recast", "abstract syntax tree"],
   "author": "Rajasegar Chandran",
   "repository": {
     "type": "git",
     "url": "https://github.com/rajasegar/jscodeshift-collections"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "jscodeshift": "^0.7.0",
     "recast": "^0.18.7"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "1.1.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.4.1",
     "jest": "25.5.4",
     "prettier": "2.3.2",
-    "release-it": "13.7.2"
+    "semantic-release": "^17.4.7"
   },
-  "release-it": {
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular",
-        "infile": "CHANGELOG.md"
-      }
-    },
-    "npm": {
-      "publish": true
-    },
-    "git": {
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true
-    }
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "release(version): Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
   }
 }
