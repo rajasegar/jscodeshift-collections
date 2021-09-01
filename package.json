@@ -1,6 +1,6 @@
 {
   "name": "jscodeshift-collections",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Extra collections api for jsdcodeshift",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,13 @@
     "semantic-release": "semantic-release",
     "lint": "eslint ."
   },
-  "keywords": ["jscodeshift", "collections", "ast", "recast", "abstract syntax tree"],
+  "keywords": [
+    "jscodeshift",
+    "collections",
+    "ast",
+    "recast",
+    "abstract syntax tree"
+  ],
   "author": "Rajasegar Chandran",
   "repository": {
     "type": "git",
