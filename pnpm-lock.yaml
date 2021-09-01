@@ -2,8 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@release-it/conventional-changelog': 1.1.4
-  '@semantic-release/changelog': ^5.0.1
-  '@semantic-release/git': ^9.0.0
+  '@semantic-release/changelog': 5.0.1
+  '@semantic-release/git': 9.0.0
   eslint: 6.8.0
   eslint-config-prettier: 8.3.0
   eslint-plugin-node: 11.1.0
@@ -12,7 +12,7 @@ specifiers:
   jscodeshift: ^0.7.0
   prettier: 2.3.2
   recast: ^0.18.7
-  semantic-release: ^17.4.7
+  semantic-release: 17.4.7
 
 dependencies:
   jscodeshift: 0.7.0
@@ -2394,11 +2394,6 @@ packages:
       delayed-stream: 1.0.0
     dev: true
 
-  /commander/2.20.3:
-    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
-    dev: true
-    optional: true
-
   /commondir/1.0.1:
     resolution: {integrity: sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=}
     dev: false
@@ -3876,7 +3871,7 @@ packages:
       optimist: 0.6.1
       source-map: 0.6.1
     optionalDependencies:
-      uglify-js: 3.8.0
+      uglify-js: 3.14.1
     dev: true
 
   /handlebars/4.7.7:
@@ -5173,7 +5168,7 @@ packages:
     resolution: {integrity: sha1-L19Fq5HjMhYjT9U62rZo607AmTs=}
     engines: {node: '>=4'}
     dependencies:
-      graceful-fs: 4.2.3
+      graceful-fs: 4.2.8
       parse-json: 4.0.0
       pify: 3.0.0
       strip-bom: 3.0.0
@@ -7611,16 +7606,6 @@ packages:
     resolution: {integrity: sha512-JhS3hmcVaXlp/xSo3PKY5R0JqKs5M3IV+exdLHW99qKvKivPO4Z8qbej6mte17SOPqAOVMjt/XGgWacnFSzM3g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
-    dev: true
-    optional: true
-
-  /uglify-js/3.8.0:
-    resolution: {integrity: sha512-ugNSTT8ierCsDHso2jkBHXYrU8Y5/fY2ZUprfrJUiD7YpuFvV4jODLFmb3h4btQjqr5Nh4TX4XtgDfCU1WdioQ==}
-    engines: {node: '>=0.8.0'}
-    hasBin: true
-    dependencies:
-      commander: 2.20.3
-      source-map: 0.6.1
     dev: true
     optional: true
 
