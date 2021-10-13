@@ -17,9 +17,9 @@ jobs:
       with:
         node-version: 12.x
     - name: install dependencies
-      run: yarn install --frozen-lockfile
+      run: npm ci
     - name: linting
-      run: yarn lint
+      run: npm run lint
 
   test:
     name: Tests
@@ -36,9 +36,9 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
     - name: install dependencies
-      run: yarn install --frozen-lockfile
+      run: npm ci
     - name: test
-      run: yarn test
+      run: npm test
 
   release:
     name: Release
@@ -50,7 +50,7 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
     - name: install dependencies
-      run: yarn install --frozen-lockfile
+      run: npm ci
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
