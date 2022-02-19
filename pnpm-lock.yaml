@@ -5,7 +5,7 @@ specifiers:
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/git': 10.0.1
   eslint: 8.9.0
-  eslint-config-prettier: 8.3.0
+  eslint-config-prettier: 8.4.0
   eslint-plugin-node: 11.1.0
   eslint-plugin-prettier: 4.0.0
   jest: 27.5.1
@@ -23,9 +23,9 @@ devDependencies:
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
   eslint: 8.9.0
-  eslint-config-prettier: 8.3.0_eslint@8.9.0
+  eslint-config-prettier: 8.4.0_eslint@8.9.0
   eslint-plugin-node: 11.1.0_eslint@8.9.0
-  eslint-plugin-prettier: 4.0.0_07b422646bb75d3db791621d4fdbc992
+  eslint-plugin-prettier: 4.0.0_9f62b85ce3ce02949dbd2ccffcebe95f
   jest: 27.5.1
   prettier: 2.5.1
   semantic-release: 19.0.2
@@ -2127,8 +2127,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-prettier/8.3.0_eslint@8.9.0:
-    resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
+  /eslint-config-prettier/8.4.0_eslint@8.9.0:
+    resolution: {integrity: sha512-CFotdUcMY18nGRo5KGsnNxpznzhkopOcOo0InID+sgQssPrzjvsyKZPvOgymTFeHrFuC3Tzdf2YndhXtULK9Iw==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -2162,7 +2162,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_07b422646bb75d3db791621d4fdbc992:
+  /eslint-plugin-prettier/4.0.0_9f62b85ce3ce02949dbd2ccffcebe95f:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -2174,7 +2174,7 @@ packages:
         optional: true
     dependencies:
       eslint: 8.9.0
-      eslint-config-prettier: 8.3.0_eslint@8.9.0
+      eslint-config-prettier: 8.4.0_eslint@8.9.0
       prettier: 2.5.1
       prettier-linter-helpers: 1.0.0
     dev: true
