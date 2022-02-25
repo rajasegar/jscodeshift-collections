@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@release-it/conventional-changelog': 4.1.0
+  '@release-it/conventional-changelog': 4.2.0
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/git': 10.0.1
   eslint: 8.9.0
@@ -19,7 +19,7 @@ dependencies:
   recast: 0.20.5
 
 devDependencies:
-  '@release-it/conventional-changelog': 4.1.0
+  '@release-it/conventional-changelog': 4.2.0
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
   eslint: 8.9.0
@@ -866,8 +866,8 @@ packages:
       '@octokit/openapi-types': 10.0.0
     dev: true
 
-  /@release-it/conventional-changelog/4.1.0:
-    resolution: {integrity: sha512-MTinrJNyzhaqJ71gg4dZCe+wzdtssUjweQT7p1lDtSqRP6BtGp98NlfBlXACnCaOaETb7bI3fknoLsztqibTpQ==}
+  /@release-it/conventional-changelog/4.2.0:
+    resolution: {integrity: sha512-o0XF8HyrUJ7u0bqXbGfq0M87pzK9cZ1ybBwDywZvV37EB1JRUJjpw1yQRcOe1gpaeOOplucb0BXj9SKuNQGBcw==}
     engines: {node: '>=10'}
     peerDependencies:
       release-it: ^14.12.1
@@ -2717,6 +2717,7 @@ packages:
 
   /graceful-fs/4.2.8:
     resolution: {integrity: sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==}
+    dev: false
 
   /graceful-fs/4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
@@ -5226,7 +5227,7 @@ packages:
     resolution: {integrity: sha512-HIeWmj77uOOHb0QX7siN3OtwV3CTntquin6TNVg6SHOqCP3hYKmox90eeFOGaY1MqJ9WYDDjkyZrW6qS5AWpbw==}
     engines: {node: '>=8'}
     dependencies:
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.9
       is-stream: 2.0.1
       make-dir: 3.0.2
       temp-dir: 1.0.0
