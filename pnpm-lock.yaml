@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@release-it/conventional-changelog': 4.3.0
+  '@release-it/conventional-changelog': 5.0.0
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/git': 10.0.1
   eslint: 8.14.0
@@ -19,7 +19,7 @@ dependencies:
   recast: 0.20.5
 
 devDependencies:
-  '@release-it/conventional-changelog': 4.3.0
+  '@release-it/conventional-changelog': 5.0.0
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
   eslint: 8.14.0
@@ -866,11 +866,11 @@ packages:
       '@octokit/openapi-types': 10.0.0
     dev: true
 
-  /@release-it/conventional-changelog/4.3.0:
-    resolution: {integrity: sha512-SAdattAPXyxADh+cWbNqlk7OBWh/SskYCj0hAb5VPmm/wrIR1dQrlKpsUQ/7O0WGGe7uhvj4YB8kVTIZipcc9w==}
-    engines: {node: '>=10'}
+  /@release-it/conventional-changelog/5.0.0:
+    resolution: {integrity: sha512-YAvGgxA8cIQSbmyHmAmLMwzCkNP74upLST8jFuDJTI+AVfK2Grp2HbZu0/NeV3sHYD20sT8YMzNVUeRxNlyHeg==}
+    engines: {node: '>=14'}
     peerDependencies:
-      release-it: ^14.12.1
+      release-it: ^15.0.0-esm.4
     dependencies:
       concat-stream: 2.0.0
       conventional-changelog: 3.1.25
