@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "jscodeshift": "^0.13.0",
-    "recast": "^0.20.0"
+    "recast": "^0.21.0"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "4.3.0",
