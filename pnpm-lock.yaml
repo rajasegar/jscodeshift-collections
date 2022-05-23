@@ -11,12 +11,12 @@ specifiers:
   jest: 28.1.0
   jscodeshift: ^0.13.0
   prettier: 2.6.2
-  recast: ^0.20.0
+  recast: ^0.21.0
   semantic-release: 19.0.2
 
 dependencies:
   jscodeshift: 0.13.0
-  recast: 0.20.5
+  recast: 0.21.1
 
 devDependencies:
   '@release-it/conventional-changelog': 4.3.0
@@ -1312,6 +1312,13 @@ packages:
 
   /ast-types/0.14.2:
     resolution: {integrity: sha512-O0yuUDnZeQDL+ncNGlJ78BiO4jnYI3bvMsD5prT0/nsgijG/LpNBIr63gTjVTNsiGkgQhiyCShTgxt8oXOrklA==}
+    engines: {node: '>=4'}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
+
+  /ast-types/0.15.2:
+    resolution: {integrity: sha512-c27loCv9QkZinsa5ProX751khO9DJl/AcB5c2KNtA6NRvHKS0PgLfcftz72KVq504vB0Gku5s2kUZzDBvQWvHg==}
     engines: {node: '>=4'}
     dependencies:
       tslib: 2.3.1
@@ -4523,6 +4530,16 @@ packages:
     engines: {node: '>= 4'}
     dependencies:
       ast-types: 0.14.2
+      esprima: 4.0.1
+      source-map: 0.6.1
+      tslib: 2.3.1
+    dev: false
+
+  /recast/0.21.1:
+    resolution: {integrity: sha512-PF61BHLaOGF5oIKTpSrDM6Qfy2d7DIx5qblgqG+wjqHuFH97OgAqBYFIJwEuHTrM6pQGT17IJ8D0C/jVu/0tig==}
+    engines: {node: '>= 4'}
+    dependencies:
+      ast-types: 0.15.2
       esprima: 4.0.1
       source-map: 0.6.1
       tslib: 2.3.1
