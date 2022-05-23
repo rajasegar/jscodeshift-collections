@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/rajasegar/jscodeshift-collections/compare/v2.0.2...v2.0.3) (2022-05-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency recast to ^0.21.0 ([1f07ae9](https://github.com/rajasegar/jscodeshift-collections/commit/1f07ae9009df45c456c205784ec0c8a458b0c747))
+
 ## [2.0.2](https://github.com/rajasegar/jscodeshift-collections/compare/v2.0.1...v2.0.2) (2021-09-01)
 
 
