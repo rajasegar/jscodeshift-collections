@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/rajasegar/jscodeshift-collections/compare/v2.0.3...v2.1.0) (2022-10-03)
+
+
+### Features
+
+* add Class Declaration api ([717dc1e](https://github.com/rajasegar/jscodeshift-collections/commit/717dc1e0b26b4f9944947dd412a4da1c0f964641))
+
 ## [2.0.3](https://github.com/rajasegar/jscodeshift-collections/compare/v2.0.2...v2.0.3) (2022-05-23)
 
 
