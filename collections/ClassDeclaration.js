@@ -1,7 +1,6 @@
 const NodeCollection = require('jscodeshift/src/collections/Node');
 const once = require('jscodeshift/src/utils/once');
 const recast = require('recast');
-const j = require('jscodeshift');
 
 const { ClassDeclaration } = recast.types.namedTypes;
 
