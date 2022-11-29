@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@release-it/conventional-changelog': 5.1.1
-  '@semantic-release/changelog': 6.0.1
+  '@semantic-release/changelog': 6.0.2
   '@semantic-release/git': 10.0.1
   eslint: 8.28.0
   eslint-config-prettier: 8.5.0
@@ -20,7 +20,7 @@ dependencies:
 
 devDependencies:
   '@release-it/conventional-changelog': 5.1.1
-  '@semantic-release/changelog': 6.0.1_semantic-release@19.0.5
+  '@semantic-release/changelog': 6.0.2_semantic-release@19.0.5
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
   eslint: 8.28.0
   eslint-config-prettier: 8.5.0_eslint@8.28.0
@@ -924,15 +924,15 @@ packages:
       semver: 7.3.8
     dev: true
 
-  /@semantic-release/changelog/6.0.1_semantic-release@19.0.5:
-    resolution: {integrity: sha512-FT+tAGdWHr0RCM3EpWegWnvXJ05LQtBkQUaQRIExONoXjVjLuOILNm4DEKNaV+GAQyJjbLRVs57ti//GypH6PA==}
+  /@semantic-release/changelog/6.0.2_semantic-release@19.0.5:
+    resolution: {integrity: sha512-jHqfTkoPbDEOAgAP18mGP53IxeMwxTISN+GwTRy9uLu58UjARoZU8ScCgWGeO2WPkEsm57H8AkyY02W2ntIlIw==}
     engines: {node: '>=14.17'}
     peerDependencies:
       semantic-release: '>=18.0.0'
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
-      fs-extra: 9.1.0
+      fs-extra: 11.0.0
       lodash: 4.17.21
       semantic-release: 19.0.5
     dev: true
@@ -1330,11 +1330,6 @@ packages:
     dependencies:
       tslib: 2.3.1
     dev: false
-
-  /at-least-node/1.0.0:
-    resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
-    engines: {node: '>= 4.0.0'}
-    dev: true
 
   /atob/2.1.2:
     resolution: {integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==}
@@ -2538,11 +2533,10 @@ packages:
       universalify: 2.0.0
     dev: true
 
-  /fs-extra/9.1.0:
-    resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
-    engines: {node: '>=10'}
+  /fs-extra/11.0.0:
+    resolution: {integrity: sha512-4YxRvMi4P5C3WQTvdRfrv5UVqbISpqjORFQAW5QPiKAauaxNCwrEdIi6pG3tDFhKKpMen+enEhHIzB/tvIO+/w==}
+    engines: {node: '>=14.14'}
     dependencies:
-      at-least-node: 1.0.0
       graceful-fs: 4.2.9
       jsonfile: 6.1.0
       universalify: 2.0.0
