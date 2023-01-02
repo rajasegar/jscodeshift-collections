@@ -30,7 +30,7 @@
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/git": "10.0.1",
     "eslint": "8.31.0",
-    "eslint-config-prettier": "8.5.0",
+    "eslint-config-prettier": "8.6.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "jest": "28.1.3",
