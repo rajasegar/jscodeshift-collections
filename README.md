@@ -16,7 +16,7 @@ npm install jscodeshift-collections
 
 ## List of collections
 - [Functiondeclaration](#functiondeclaration)
-- [ClassDeclaration](#classdeclaration)
+- [CallExpression](#callexpression)
 - [Importdeclaration](#importdeclaration)
 
 ## Usage
