@@ -18,6 +18,7 @@ npm install jscodeshift-collections
 - [Functiondeclaration](#functiondeclaration)
 - [CallExpression](#callexpression)
 - [Importdeclaration](#importdeclaration)
+- [ClassDeclaration](#classdeclaration)
 
 ## Usage
 ```js
@@ -128,4 +129,14 @@ j.findFunctionDeclarations('foo')
 // Find and add specifiers
   j.findImportDeclarations('a')
   .addSpecifier('c');
+```
+
+### ClassDeclaration
+```js
+// Find all class declarations
+j.findClassdeclarations();
+
+// Find and rename
+j.findClassDeclarations('foo').renameTo('bar')
+
 ```
