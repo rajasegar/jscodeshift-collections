@@ -1,6 +1,6 @@
 {
   "name": "jscodeshift-collections",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Extra collections api for jsdcodeshift",
   "main": "index.js",
   "scripts": {
